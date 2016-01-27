@@ -16,7 +16,7 @@ private:
     //Attributs :
     int phase;
     vector<Forme*> MesFormes;
-    vector<Forme*> MesBords;
+    vector<Coord> MesBords;
     Mat Img_Original;
     Mat Img_Transform;
     Mat Img_Contrast;
@@ -45,7 +45,6 @@ private:
     double angle(Point pt1, Point pt2, Point pt0);
     void setLabel(Mat& im, const string label, vector<Point>& contour);
     Mat Contrast(Mat img,float beta,float alpha);
-    int Get_Nb_Bord();
 
 public:
     LesFormes();
@@ -59,5 +58,7 @@ public:
     void setImg_Transform(vector<Coord> c, Mat img);
     Mat Get_Img_Canny();
     Mat Get_Img_Contrast();
+    vector<Coord> getBords(){return MesBords;};
+    int Get_Nb_Bords();
 
 };

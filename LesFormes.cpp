@@ -50,10 +50,6 @@ LesFormes::~LesFormes()
         free(MesFormes.at(i));
     }
 
-    for(int i=0; i<MesBords.size(); i++)
-    {
-        free(MesBords.at(i));
-    }
 }
 
 void LesFormes::Set_Img(Mat img)
@@ -190,7 +186,7 @@ void LesFormes::CreateFormes()
     }
 }
 
-
+/*
 bool LesFormes::CreateBords()
 {
     for(int i=0; i<MesBords.size(); i++)
@@ -205,6 +201,7 @@ bool LesFormes::CreateBords()
     }
 
 }
+*/
 
 Mat LesFormes::Get_Img_Original()
 {
@@ -297,23 +294,33 @@ Mat LesFormes::Contrast(Mat img,float beta,float alpha)
     */
 }
 
-/*
-int LesFormes::Get_Nb_Bord()
+
+int LesFormes::Get_Nb_Bords()
 {
-    int Nb_Bord=0;
-    for(int i=0; i<MesFormes.size(); i++)
+    MesBords.clear();
+    for(int i=0; i<this->Get_Nb_Forme(); i++)
     {
-        string FName=MesFormes.at(i)->Get_name();
+        Coord c;
+        vector<Coord> LesCoords=this->Get_Forme(i)->GetCoords();
+
+        string FName=this->Get_Forme(i)->Get_name();
         if (FName.compare(0,FName.size(),"Rectangle") == 0)
         {
-            Nb_Bord++;
+            c.y=(LesCoords.at(0).y+LesCoords.at(1).y)/2;
+            c.x=(LesCoords.at(1).x+LesCoords.at(2).x)/2;
+            std::cout<<"Coords : "<<i<<std::endl;
+            std::cout<<"x: "<<c.x<<std::endl;
+            std::cout<<"y: "<<c.y<<std::endl;
+            MesBords.push_back(c);
         }
+        cout<<"MesBords.size() : "<<MesBords.size()<<endl;
+
     }
-    cout<<"Nb_Bord : "<<Nb_Bord<<endl;
-    return Nb_Bord;
+
+    return MesBords.size();
 
 }
-*/
+
 void LesFormes::setImg_Transform(vector<Coord> c, Mat img){
 
     // Define the destination image

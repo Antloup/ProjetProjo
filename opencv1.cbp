@@ -111,8 +111,6 @@
 		<Unit filename="Triangle.cpp" />
 		<Unit filename="Triangle.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="testTarget.cpp" />
-		<Unit filename="testTarget.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

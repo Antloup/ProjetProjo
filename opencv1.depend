@@ -16,7 +16,7 @@
 	<iostream>
 	<fstream>
 
-1453799643 source:c:\users\anthony\desktop\projetprojo\lesformes.cpp
+1453886949 source:c:\users\anthony\desktop\projetprojo\lesformes.cpp
 	"LesFormes.h"
 	"Forme.h"
 	"Rectangle.h"
@@ -24,65 +24,67 @@
 	"Cercle.h"
 	<iostream>
 
-1453798779 c:\users\anthony\desktop\projetprojo\lesformes.h
+1453886946 c:\users\anthony\desktop\projetprojo\lesformes.h
 	"Forme.h"
 	"opencv2/core/utility.hpp"
 	"opencv2/imgproc.hpp"
 	"opencv2/imgcodecs.hpp"
 	"opencv2/highgui.hpp"
 
-1453659908 c:\users\anthony\desktop\projetprojo\forme.h
+1453884671 c:\users\anthony\desktop\projetprojo\forme.h
 	"opencv2/core/utility.hpp"
 	"opencv2/imgproc.hpp"
 	"opencv2/imgcodecs.hpp"
 	"opencv2/highgui.hpp"
 	"Coord.h"
 
-1453658782 c:\users\anthony\desktop\projetprojo\rectangle.h
+1453884671 c:\users\anthony\desktop\projetprojo\rectangle.h
 	"Forme.h"
 	"opencv2/core/utility.hpp"
 	"opencv2/imgproc.hpp"
 	"opencv2/imgcodecs.hpp"
 	"opencv2/highgui.hpp"
 
-1453799603 source:c:\users\anthony\desktop\projetprojo\main.cpp
+1453885733 source:c:\users\anthony\desktop\projetprojo\main.cpp
 	"opencv2/core/utility.hpp"
 	"opencv2/imgproc.hpp"
 	"opencv2/imgcodecs.hpp"
 	"opencv2/highgui.hpp"
+	<SFML/Graphics.hpp>
 	<stdio.h>
 	<iostream>
 	<fstream>
 	<typeinfo>
 	"LesFormes.h"
+	"testTarget.h"
 
-1453637833 c:\users\anthony\desktop\projetprojo\coord.h
+1453884671 c:\users\anthony\desktop\projetprojo\coord.h
 
-1453660393 source:c:\users\anthony\desktop\projetprojo\rectangle.cpp
+1453884671 source:c:\users\anthony\desktop\projetprojo\rectangle.cpp
 	"Rectangle.h"
 	"Forme.h"
 	<iostream>
 
-1453661873 source:c:\users\anthony\desktop\projetprojo\cercle.cpp
+1453884671 source:c:\users\anthony\desktop\projetprojo\cercle.cpp
 	"Cercle.h"
 	"Forme.h"
 	<iostream>
 
-1453661843 c:\users\anthony\desktop\projetprojo\cercle.h
+1453884671 c:\users\anthony\desktop\projetprojo\cercle.h
 	"Forme.h"
 	"opencv2/core/utility.hpp"
 	"opencv2/imgproc.hpp"
 	"opencv2/imgcodecs.hpp"
 	"opencv2/highgui.hpp"
 
-1453712162 c:\users\anthony\desktop\projetprojo\triangle.h
+1453884671 c:\users\anthony\desktop\projetprojo\triangle.h
 	"Forme.h"
 	"opencv2/core/utility.hpp"
 	"opencv2/imgproc.hpp"
 	"opencv2/imgcodecs.hpp"
 	"opencv2/highgui.hpp"
 
-1453712335 source:c:\users\anthony\desktop\projetprojo\triangle.cpp
+1453884671 source:c:\users\anthony\desktop\projetprojo\triangle.cpp
 	"Triangle.h"
 	"Forme.h"
 	<iostream>
@@ -165,6 +167,15 @@
 	"LesFormes.h"
 
 1453816026 source:c:\users\mobi\documents\projets\projetprojo\testtarget.cpp
+	"testTarget.h"
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1453884673 c:\users\anthony\desktop\projetprojo\testtarget.h
+	<SFML/Graphics.hpp>
+	"LesFormes.h"
+
+1453884673 source:c:\users\anthony\desktop\projetprojo\testtarget.cpp
 	"testTarget.h"
 	<SFML/Graphics.hpp>
 	<iostream>

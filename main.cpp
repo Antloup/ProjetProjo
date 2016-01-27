@@ -11,7 +11,6 @@
 #include <typeinfo>
 
 #include "LesFormes.h"
-#include "testTarget.h"
 
 using namespace cv;
 using namespace std;
@@ -45,8 +44,6 @@ int main(int, char**)
     c4.setFillColor(sf::Color::Red);
     c4.setRadius(7.f);
 
-    testTarget test;
-
     // Touche clavier
     char key;
     VideoCapture cap(0); // open the default camera
@@ -70,7 +67,7 @@ int main(int, char**)
 
         cap >> Video; // get a new frame from camera
         // take a shoot
-        if(key=='s')
+        //if(key=='s')
         {
             cout<<endl<<"NOUVELLE CAPTURE :"<<endl;
             // On enregistre l'image
@@ -103,11 +100,10 @@ int main(int, char**)
 
                 Formes->Get_Forme(i)->PrintCoord();
             }
-            test.setPosition(Formes); // Recherche bords
-            cout<<"Nb Centre :"<<test.getNbCentre()<<endl;
-            if(test.getNbCentre()==4){ // Détection bord ok !
+            cout<<"Nb Bords :"<<Formes->Get_Nb_Bords()<<endl;
+            if(Formes->Get_Nb_Bords()==4){
                 cout<<"Bord ok, transformatiooooon !!" <<endl;
-                Formes->setImg_Transform(test.getCentre(),Formes->Get_Img_Original());
+                Formes->setImg_Transform(Formes->getBords(),Formes->Get_Img_Original());
                 imshow("Img_Transform",Formes->getImg_Transform());
             }
 
@@ -122,8 +118,6 @@ int main(int, char**)
         window.draw(rect2);
         window.draw(rect3);
         window.draw(rect4);
-
-        test.draw(window);
 
         window.display();
 
